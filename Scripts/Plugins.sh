@@ -12,7 +12,6 @@ git clone --depth=1 --single-branch --branch $(echo $OWRT_URL | grep -iq "lede" 
 git clone --depth=1 --single-branch --branch $(echo $OWRT_URL | grep -iq "lede" && echo "18.06" || echo "master") https://github.com/jerrykuku/luci-app-argon-config.git
 
 #Pass Wall
-git clone --depth=1 --single-branch https://github.com/xiaorouji/openwrt-passwall.git
 git clone --depth=1 --single-branch https://github.com/xiaorouji/openwrt-passwall2.git
 git clone --depth=1 --single-branch https://github.com/xiaorouji/openwrt-passwall-packages.git
 
