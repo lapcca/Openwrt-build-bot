@@ -1,4 +1,4 @@
-# OpenWRT-CI
+### openwrt-build-bot
 Github action compile  OpenWRT
 
 LEDE源码：
@@ -7,7 +7,7 @@ https://github.com/coolsnowwolf/lede
 IMMORTALWRT源码：
 https://github.com/immortalwrt/immortalwrt
 
-# 固件简要说明：
+### 固件简要说明：
 
 固件每周六早上0点自动编译。
 
@@ -15,7 +15,7 @@ https://github.com/immortalwrt/immortalwrt
 
 X64系列，包含X64、X86
 
-# 目录简要说明：
+### 目录简要说明：
 
 Depends.txt——环境依赖列表
 
