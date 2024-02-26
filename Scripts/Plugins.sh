@@ -19,7 +19,7 @@ remote=https://github.com/xiaorouji/openwrt-passwall.git
 latest_tag=$(git ls-remote --tags --exit-code --refs "$remote" \
   | sed -E 's/^[[:xdigit:]]+[[:space:]]+refs\/tags\/(.+)/\1/g' \
   | sort --version-sort | tail -n1)
-echo $latest_tag        
+echo "passwall version:$latest_tag"        
 git clone --single-branch --branch "$latest_tag" "$remote"
 
 
