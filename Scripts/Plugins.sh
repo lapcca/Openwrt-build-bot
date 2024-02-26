@@ -15,7 +15,14 @@ git clone --depth=1 --single-branch --branch $(echo $OWRT_URL | grep -iq "lede" 
 git clone --depth=1 --single-branch --branch "dev" https://github.com/vernesong/OpenClash.git
 
 #Pass Wall
-git clone --depth=1 --single-branch https://github.com/xiaorouji/openwrt-passwall.git
+remote=https://github.com/xiaorouji/openwrt-passwall.git
+latest_tag=$(git ls-remote --tags --exit-code --refs "$remote" \
+  | sed -E 's/^[[:xdigit:]]+[[:space:]]+refs\/tags\/(.+)/\1/g' \
+  | sort --version-sort | tail -n1)
+echo $latest_tag        
+git clone --single-branch --branch "$latest_tag" "$remote"
+
+
 git clone --depth=1 --single-branch https://github.com/xiaorouji/openwrt-passwall-packages.git
 
 #Home Proxy
