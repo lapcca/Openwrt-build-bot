@@ -20,9 +20,7 @@ latest_tag=$(git ls-remote --tags --exit-code --refs "$remote" \
   | sed -E 's/^[[:xdigit:]]+[[:space:]]+refs\/tags\/(.+)/\1/g' \
   | sort --version-sort | tail -n1)
 echo "passwall version:$latest_tag"        
-#git clone --single-branch --branch "$latest_tag" "$remote"
-git clone --single-branch "$remote"
-
+git clone --single-branch --branch "$latest_tag" "$remote"
 
 git clone --depth=1 --single-branch https://github.com/xiaorouji/openwrt-passwall-packages.git
 
